@@ -1,0 +1,9 @@
+**/migrations
+venv
+**/venv
+**/*.sqlite
+
+**/*.conf
+**/gunicorn.conf.py
+**/settings_dev.py
+**/settings_prod.py

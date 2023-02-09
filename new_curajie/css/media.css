@@ -1,0 +1,140 @@
+@media (min-width: 1440px) {
+  .cover-box.blue-bg {
+    margin-right: -9.5rem;
+  }
+  .big-slider .carousel-indicators {
+    margin-right: calc((100% - 1385px) / 2);
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .big-slider .carousel-indicators {
+    margin-right: calc((100% - 1080px) / 2);
+  }
+}
+@media (max-width: 1199px) {
+  .big-slider .carousel-indicators {
+    margin-right: calc((100% - 900px) / 2);
+  }
+}
+@media (min-width: 992px) {
+  
+}
+
+
+
+@media (max-width: 1024px){
+
+}
+@media (max-width: 992px){
+  .logo {
+    max-width: 150px;
+  }
+  .big-slider .carousel-indicators {
+    margin-right: 30px;
+  }
+  .lang {
+    width: 22px;
+    height: 16px;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  
+}
+  /* >> before 767px << */
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  h1 {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 36px;
+  }
+  h3 {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .top-slider-box {
+    margin: 0px -15px;
+  }
+  .cover-box {
+    border-radius: 0px;
+  }
+  .cover-box p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .cover-box.blue-bg {
+    background-color: #0B488A;
+  }
+  .cover-box.red-bg {
+    background-color: #CC1D0E;
+  }
+  h2{
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .home-page-card {
+    padding: 24px 20px;
+  }
+  .home-page-card .p-title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .home-page-card::before,
+  .red-card-btn::before {
+    width: 25px;
+    height: 25px;
+    top: 10px;
+    right: 10px;
+  }
+  .home-consult .sub-title {
+    font-size: 20px;
+    line-height: 23px;
+  }
+  .how-we-work.red-arrow-right {
+    transform: rotate(90deg);
+  }
+  .top.row-item-box {
+    margin: 0 15px;
+    flex-wrap: wrap;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .top .item-box-body {
+    width: auto;
+    min-height: auto;
+    border-radius: 50%;
+    box-shadow: none;
+  }
+  .start-consultation p {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .our-group {
+    padding-top: 300px;
+  }
+  .contacts-box p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .card-body {
+    padding-left: 0px;
+  }
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 700px;
+  }
+}
+@media (max-width: 576px) {
+  
+}

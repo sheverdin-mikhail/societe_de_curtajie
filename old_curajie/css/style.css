@@ -1,0 +1,429 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css");
+
+@font-face {
+  font-family: 'Intro';
+  src: local('Intro Regular Caps'), local('Intro-Regular-Caps'),
+      url('../fonts/Intro-Regular-Caps.woff2') format('woff2'),
+      url('../fonts/Intro-Regular-Caps.woff') format('woff'),
+      url('../fonts/Intro-Regular-Caps.ttf') format('truetype');
+  font-weight: 100,200,300,400,500,600,700;
+  font-style: normal;
+}
+
+a, a:hover {
+  text-decoration: none !important;
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms;
+}
+a:not(.btn) {
+  color: #0b78a1;
+}
+a:not(.btn):hover {
+  color: #22b8f0;
+}
+p {
+  color: #666666;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Intro", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #666666;
+  background-color: #fff;
+}
+header {
+  background: #FFFFFF;
+}
+.logo-text {
+  color: #ee3324;
+  font-family: 'trebuchet ms', geneva;
+}
+.lang-switcher ul {
+  margin: 0;
+  padding: 0;
+}
+.lang-group {
+  display: flex;/**/
+  flex-wrap: nowrap;/**/
+  align-items: center;/**/
+}
+.lang-switcher ul.lang-group li {
+  display: flex;
+/*  display: table-cell;*/
+}
+.lang-switcher ul.lang-group li a {
+  padding: 5px;
+  display: flex;/**/
+}
+.lang-active a {
+  border: 2px solid #ee3324;
+  padding: 3px !important;
+/*  padding: 0px 3px 3px !important;*/
+  border-radius: 5px;
+}
+.navbar {
+  background: #ee3324;
+}
+.navbar-toggler {
+  border: none !important;
+}
+.nav-link {
+  color: #ffffff !important;
+/*  font-size: 13pt;  */
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+}
+.nav-item.active a:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  height: 3px;
+  background-color: #ececed;
+/*  border-bottom: 2px solid #ececed; */
+}
+.nav-item a:hover, .nav-item a:focus{
+  background-color: #ececed !important;
+  color: #ee3324 !important;
+  box-shadow: none;
+}
+.dropdown-menu {
+  background-color: #ececed !important;
+  color: #545252 !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+.dropdown-menu.scrollable {
+  height: auto;
+  max-height: 60vh; /*30em;*/
+  overflow-x: hidden;
+}
+.dropdown-menu a {
+  color: #666666;
+}
+/* >> icon triangle open menu << */
+.dropdown-toggle:after {
+  display: none !important;
+}
+/* Open dropdown-menu with hover */
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-item:hover>.dropdown-menu {
+  display: block;
+}
+.navbar-nav .nav-link {
+  display:inline-block;
+  white-space: nowrap!important;
+}
+.dropdown>.dropdown-toggle:active {
+  pointer-events: none;
+}
+.dropdown {position: relative;}
+.dropdown:hover>.dropdown-toggle {
+  background-color: #ececed !important;
+  color: #ee3324 !important;
+  box-shadow: none;
+}
+/* END Open dropdown-menu with hover */
+.dropdown-item img {
+  width: 25px;
+  height: auto;
+}
+.body-banner {
+  display: block;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 440px;
+  margin-top: 169px;
+}
+.body-banner.main {
+  background-image: url(/img/fontan2.png);
+}
+.body-banner.about {
+  background-image: url(/img/fontan2.png);
+}
+.body-banner.role-and-advantages-of-an-insurance-broker {
+  background-image: url(/img/bg-broker.jpg);
+}
+.body-banner.marine-risks {
+  background-image: url(/img/bg-mor-risk.jpg);
+}
+.body-banner.cargo-risks {
+  background-image: url(/img/bg-gruz.jpg);
+}
+.body-banner.aviation-risks {
+  background-image: url(/img/bg-av.jpg);
+}
+.body-banner.space-risks {
+  background-image: url(/img/bg-kosm.jpg);
+}
+.body-banner.energy-risks {
+  background-image: url(/img/bg-energy.jpg);
+}
+.body-banner.property-risks {
+  background-image: url(/img/bg-imusch.jpg);
+}
+.body-banner.construction-and-installation-risks {
+  background-image: url(/img/bg-str.jpg);
+}
+.body-banner.personal-insurance {
+  background-image: url(/img/bg-lich-str.jpg);
+}
+.body-banner.comprehensive-insurance-for-corporate-clients {
+  background-image: url(/img/bg-corp-klienty.jpg);
+}
+.body-banner.obligatory-reinsurance {
+  background-image: url(/img/bg-ob.jpg);
+}
+.body-banner.facultative-reinsurance {
+  background-image: url(/img/bg-fakt-str.jpg);
+}
+.body-banner.zheneva {
+  background-image: url(/img/zheneva.png);
+}
+.body-banner.moscow {
+  background-image: url(/img/moscow1.png);
+}
+.body-banner.baku {
+  background-image: url(/img/bg-baku.jpg);
+}
+.body-banner.almaty {
+  background-image: url(/img/almaty1.jpg);
+}
+.body-banner.kishinev {
+  background-image: url(/img/kishinev1.jpg);
+}
+.body-banner.dubai {
+  background-image: url(/img/dubai.png);
+}
+.body-banner.about-us-image {
+  background-image: url(/img/zheneva.png);
+}
+.body-banner .container{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.banner-header {
+  position: relative;
+  background-color: #ee3324;
+  color: #fff;
+/*  padding: 12px 16px; */
+  text-transform: uppercase !important;
+}
+.body-content {
+  position: relative;
+}
+.page-header-bg {
+  background-color: #ee3324;
+}
+.page-header-bg h2 {
+  color: #fff;
+/*  padding: 12px 16px; */
+  text-transform: uppercase !important;
+  margin: 0px;
+}
+
+.body-content .activities h4 {
+  color: #ee3324;
+}
+/*
+.body-content .activities .bi {
+  border: 1px solid;
+  border-radius: 50%;
+  padding: 2px 2px 1px 3px;
+}
+*/
+.box-shadow {
+  position: relative;
+  max-width: 270px;
+  min-height: 240px;
+  box-shadow: 0px 0px 5px #bdb6b6;/*0px 0px 5px #00000036*/
+}
+.box-shadow .icon {
+  height: 135px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-shadow .icon img {
+  width: auto;
+  margin: auto;
+}
+.box-shadow .caption {
+  padding:24px;
+  padding-top:0px !important;
+}
+.box-shadow .caption p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px; /*16px;*/
+  line-height: 20px;
+}
+.box-shadow .caption p {
+  margin: 0;
+}
+.box-shadow .more {
+  position: absolute;
+  left:0;
+  bottom: 0;
+  padding-left: 1rem;
+  padding-bottom: 0.7rem;
+}
+
+.offices-contact {
+  max-width: 600px;
+}
+.btn:disabled {
+  cursor: default;
+}
+.btn-red {
+  display: inline  !important;
+  margin: 0 5px 5px 0  !important;
+  padding: 10px  !important;
+  background: #ff0202  !important;
+  border: 1px solid #ff0202  !important;
+  border-radius: 0px  !important;
+  color: #ffffff  !important;
+}
+.office {
+  display: none;
+}
+.office.selected-office {
+  display: block !important;
+}
+.go-top {
+  position: relative;
+  display: block;
+  width: 33px;
+  height: 33px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.go-top:hover {
+  background-color: #ee3324;
+}
+.go-top:before {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  transform: rotate(315deg);
+  top: 45%;
+  left: 0px;
+}
+.go-top:after {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  transform: rotate(45deg);
+  left: 13px;
+  top: 45%;
+}
+.license-img {
+  width: 100%;
+  height: auto;
+}
+.send-mail-form {
+  position: relative;
+  background-color: #ee3324;
+  color: #fff;
+}
+.send-mail-form-header {
+  color: #fff;
+  font-weight: 700;
+}
+.send-mail-form label {
+  margin: 0;
+}
+.send-mail-form .rsform-input-box {
+  border-radius: 0px !important;
+}
+.send-mail-form .rsform-text-box{
+  border-radius: 0px !important;
+}
+.send-mail-form textarea {
+  height: 38px !important;
+}
+.help-block {
+  display: block;
+  margin-bottom: 10px;
+}
+.send-mail-form .btn {
+  background-color: #fff !important;
+  color: #545252 !important;
+  background-image: none !important;
+  border-radius: 0px !important;
+  border: 1px solid #fff !important;
+}
+.send-mail-form .btn:hover {
+  background-color: #ee3324 !important;
+  color: #fff !important;
+  background-image: none !important;
+  border-radius: 0px !important;
+  border: 1px solid #fff !important;
+}
+.bottom-map {
+  position: relative;
+ }
+.bottom-map iframe {
+  border: 0;
+  position: absolute;
+ }
+.contact-wrap {
+  position: relative;
+ }
+.map-contact {
+   background-color: #ffffff;
+   box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
+ }
+.map-contact .h5 {
+   border-bottom: 2px solid #ee3324;
+ }
+.map-contact table {
+   width: 100%;
+ }
+.map-contact table td {
+  vertical-align: baseline;
+ }
+.btn-outline-red {
+  color: #ee3324 !important;
+  border-color: #ee3324 !important;
+  border-radius: 0px !important;
+}
+.btn-outline-red:hover {
+  color: #fff !important;
+  background-color: #ee3324 !important;
+  border-color: #ee3324 !important;
+}
+footer {
+  background: #ee3324;
+  padding: 30px 0 10px !important;
+  border-top: none;
+  color: #fff;
+}
+footer a, footer p {
+  text-transform: uppercase !important;
+  color: #ffffff !important;
+  font-size: 12pt !important;
+  font-weight: 600 !important;
+  margin: 0px;
+}
+footer a:hover {
+  color: #4c4c4c!important;
+}
