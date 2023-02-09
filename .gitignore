@@ -1,9 +1,12 @@
 **/migrations
 venv
 **/venv
-**/*.sqlite
+**/*.sqlite3
 
 **/*.conf
 **/gunicorn.conf.py
 **/settings_dev.py
 **/settings_prod.py
+
+**/.my_pgpass
+**/front
