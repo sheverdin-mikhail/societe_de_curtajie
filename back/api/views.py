@@ -30,11 +30,7 @@ class SendConsultationMessage(generics.CreateAPIView):
 
 
         serializer = self.get_serializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        self.perform_create(serializer)
-        headers = self.get_success_headers(serializer.data)
-
-
+        
         send_mail(
             'Уведомление',
             'Ваша заявка на консультацию принята, ожидайте с вами свяжется наш специалист!',
@@ -52,7 +48,7 @@ class SendConsultationMessage(generics.CreateAPIView):
             fail_silently=False
         )
 
-        return super().create(request)        
+        return super().create(request)
 
 
 
@@ -64,10 +60,6 @@ class CreateCallApplication(generics.CreateAPIView):
     def create(self, request):
 
         serializer = self.get_serializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        self.perform_create(serializer)
-        headers = self.get_success_headers(serializer.data)
-
         send_mail(
             'Уведомление',
             f"Пришла заявка на звонок. Имя: {serializer.data['name']}, Телефон: {serializer.data['phone']}, Компания: {serializer.data['company']}",
