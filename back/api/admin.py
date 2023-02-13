@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django import forms
 from ckeditor.widgets import CKEditorWidget
-from .models import Service, News, Review
+from .models import Service, News, Review, Application
 
 
 class SerivceAdminForm(forms.ModelForm):
@@ -25,4 +25,8 @@ class NewsAdmin(admin.ModelAdmin):
 @admin.register(Review)
 class ReviewAdmin(admin.ModelAdmin):
     list_display = ('id', 'rating', 'author', 'date')
+
+@admin.register(Application)
+class ReviewAdmin(admin.ModelAdmin):
+    list_display = ('name', 'phone', 'email', 'company', 'type')
 
