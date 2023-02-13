@@ -1,4 +1,4 @@
-**/migrations
+**/migrations/*.py
 venv
 **/venv
 **/*.sqlite3
@@ -10,3 +10,8 @@ venv
 
 **/.my_pgpass
 **/front
+
+**/deploy.txt
+**/__pycache__
+**/logs/*.*
+**/*.pyc

@@ -38,7 +38,7 @@ class SendConsultationMessage(generics.CreateAPIView):
         send_mail(
             'Уведомление',
             'Ваша заявка на консультацию принята, ожидайте с вами свяжется наш специалист!',
-            None,
+            'info@scr-broker.ru',
             [serializer.data['email']],
             fail_silently=False
         )
@@ -46,13 +46,13 @@ class SendConsultationMessage(generics.CreateAPIView):
         send_mail(
             'Уведомление',
             f"Пришла заявка на консультацию. Имя: {serializer.data['name']}, Почта: {serializer.data['email']}, Телефон: {serializer.data['phone']}, Компания: {serializer.data['company']}",
-            None,
+            'info@scr-broker.ru',
             # ['scr@scr-broker.com'],
             ['msheverdin648@gmail.com'],
             fail_silently=False
         )
 
-        return super().create()        
+        return super().create(request)        
 
 
 
@@ -71,7 +71,7 @@ class CreateCallApplication(generics.CreateAPIView):
         send_mail(
             'Уведомление',
             f"Пришла заявка на звонок. Имя: {serializer.data['name']}, Телефон: {serializer.data['phone']}, Компания: {serializer.data['company']}",
-            None,
+            'info@scr-broker.ru',
             # ['scr@scr-broker.com'],
             ['msheverdin648@gmail.com'],
             fail_silently=False
