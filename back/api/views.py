@@ -22,7 +22,7 @@ class SendConsultationMessage(generics.CreateAPIView):
     permission_classes = [permissions.AllowAny]
 
     def get_queryset(self):
-        query = Application.objects.all()
+        query = Application.objects.all().order_by('id')
         return query
     
 
@@ -30,7 +30,7 @@ class SendConsultationMessage(generics.CreateAPIView):
 
 
         serializer = self.get_serializer(data=request.data)
-        
+        serializer.is_valid(raise_exception=True)
         send_mail(
             'Уведомление',
             'Ваша заявка на консультацию принята, ожидайте с вами свяжется наш специалист!',
@@ -43,8 +43,7 @@ class SendConsultationMessage(generics.CreateAPIView):
             'Уведомление',
             f"Пришла заявка на консультацию. Имя: {serializer.data['name']}, Почта: {serializer.data['email']}, Телефон: {serializer.data['phone']}, Компания: {serializer.data['company']}",
             'info@scr-broker.ru',
-            # ['scr@scr-broker.com'],
-            ['msheverdin648@gmail.com'],
+            ['scr@scr-broker.com'],
             fail_silently=False
         )
 
@@ -60,12 +59,12 @@ class CreateCallApplication(generics.CreateAPIView):
     def create(self, request):
 
         serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
         send_mail(
             'Уведомление',
             f"Пришла заявка на звонок. Имя: {serializer.data['name']}, Телефон: {serializer.data['phone']}, Компания: {serializer.data['company']}",
             'info@scr-broker.ru',
-            # ['scr@scr-broker.com'],
-            ['msheverdin648@gmail.com'],
+            ['scr@scr-broker.com'],
             fail_silently=False
         )
 
