@@ -12,7 +12,7 @@ from .models import Service, Application
 class ServicesList(generics.ListAPIView):
 
     serializer_class = ServicesSerializer
-    queryset = Service.objects.all()
+    queryset = Service.objects.all().order_by('id')
 
 
 
@@ -22,7 +22,7 @@ class SendConsultationMessage(generics.CreateAPIView):
     permission_classes = [permissions.AllowAny]
 
     def get_queryset(self):
-        query = Application.objects.all().order_by('id')
+        query = Application.objects.all()
         return query
     
 
