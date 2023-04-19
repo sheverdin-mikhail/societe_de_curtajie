@@ -9,7 +9,7 @@ class Service(models.Model):
     title  = models.CharField(verbose_name='Название услуги', max_length=255)
     shortcut = models.CharField(verbose_name='Краткое назввание', max_length=255)
     content = models.TextField(("Содержание услуги"))
-    icon = models.CharField(("Иконка"), max_length=50)
+    icon = models.TextField(("Иконка"), blank=True, null=True)
     banner = models.ImageField(("Баннер"), upload_to='services', height_field=None, width_field=None, max_length=None, blank=True, null=True)
      
 
